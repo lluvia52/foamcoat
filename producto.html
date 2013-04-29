@@ -112,7 +112,10 @@
 	    $(function(){
 	
 	      /* Here is the slider using default settings */
-	      $('#slider-id').codaSlider();
+	      $('#slider-id').codaSlider({
+	      dynamicArrowLeftText:" prev",
+	      dynamicArrowRightText:"next "
+	      });
 	      /* If you want to adjust the settings, you set an option
 	         as follows:
 	
@@ -144,13 +147,13 @@
 	</div><!-- end of #header-wp -->
 </header> 
 	<div id="container">
-		<div id="container-wp">
+		<div id="contenedor-wp">
 			<div class="coda-slider" id="slider-id">
 			<div>
 				<div class="top">
 					<div class="top-l">
 					<h1>Serie 10</h1>
-					<p>Líneas elegantes que combinan trazos rectos, secciones curvas de gran amplitud y detalles de medio círculo.  </br>Estilo versátil que combina con prácticamente cualquier estilo de casa actual.</p>
+					<p>Líneas elegantes que combinan trazos rectos, secciones curvas de gran amplitud y detalles de medio círculo. Estilo versátil que combina con prácticamente cualquier estilo de casa actual.</p>
 					</div><!-- end of #top-l -->
 					<img class="fachada" src="_/img/fachada.png"/>
 				</div><!-- end of #top -->
