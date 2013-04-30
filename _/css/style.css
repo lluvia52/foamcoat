@@ -340,7 +340,7 @@ header {
 		background: linear-gradient(to bottom,  #77202e 0%,#93272f 100%); /* W3C */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#77202e', endColorstr='#93272f',GradientType=0 ); /* IE6-9 */
 	}			
-	#container-wp a img {
+	#container-wp #info a img {
 		width: 24px;
 		height: 24px;
 		position: absolute;
@@ -355,52 +355,52 @@ header {
 }
 	#paso1
 	 {
-	 	background: transparent url('../img/inst1.jpg') no-repeat center center;
+	 	background: transparent url('../img/inst01.jpg') no-repeat center center;
 	 	float: left;
 	 	 }
 		 #paso1:hover{
-		 	background: transparent url('../img/inst01.jpg') no-repeat center center;
+		 	background: transparent url('../img/inst1.jpg') no-repeat center center;
 		 }
 	#paso2
 	  {
-	  	background: transparent url('../img/inst2.jpg') no-repeat center center;
+	  	background: transparent url('../img/inst02.jpg') no-repeat center center;
 	  	float: right;
 	  }
 		  #paso2:hover{
-		  	background: transparent url('../img/inst02.jpg') no-repeat center center;
+		  	background: transparent url('../img/inst2.jpg') no-repeat center center;
 		  }
 	#paso3
 	   {
-	   	background: transparent url('../img/inst3.jpg') no-repeat center center;
+	   	background: transparent url('../img/inst03.jpg') no-repeat center center;
 	   	float: left;
 	   }
 		   #paso3:hover{
-		   	background: transparent url('../img/inst03.jpg') no-repeat center center;
+		   	background: transparent url('../img/inst3.jpg') no-repeat center center;
 		   }
 	#paso4
 	   {
-	   	background: transparent url('../img/inst4.jpg') no-repeat center center;
+	   	background: transparent url('../img/inst04.jpg') no-repeat center center;
 	   	float: right;
 	   }
 		   #paso4:hover{
-		   	background: transparent url('../img/inst04.jpg') no-repeat center center;
+		   	background: transparent url('../img/inst4.jpg') no-repeat center center;
 		   }
 	#paso5
 	   {
-	   	background: transparent url('../img/inst5.jpg') no-repeat center center;
+	   	background: transparent url('../img/inst05.jpg') no-repeat center center;
 	   	float: left;
 	   	margin-bottom: 40px;
 	   }
 		   #paso5:hover{
-		   	background: transparent url('../img/inst05.jpg') no-repeat center center;
+		   	background: transparent url('../img/inst5.jpg') no-repeat center center;
 		   }   
 	#paso6
 	   {
-	   	background: transparent url('../img/inst6.jpg') no-repeat center center;
+	   	background: transparent url('../img/inst06.jpg') no-repeat center center;
 	   	float: right;
 	   }
 		   #paso6:hover{
-		   	background: transparent url('../img/inst06.jpg') no-repeat center center;
+		   	background: transparent url('../img/inst6.jpg') no-repeat center center;
 		   }  
 	/* Pagina INSTALACION*/				
 footer {
@@ -479,8 +479,13 @@ footer {
 		}
 		#welcome ul li ul.series li {
 			display: list-item;
+			
+		}
+		#welcome ul li ul.series li a {
 			font: normal 18px "clan-bookbook";
 			text-transform: uppercase;	
+			text-decoration: none;
+			color: #000;
 		}
 
 			#welcome img.serie {
@@ -660,4 +665,4 @@ bottom: 5px;
 	#banner-fade301 a:hover, #banner-fade302 a:hover, #banner-fade303 a:hover, #banner-fade401 a:hover, #banner-fade402 a:hover, #banner-fade403 a:hover, #banner-fade201 a:hover, #banner-fade202 a:hover, #banner-fade203 a:hover, #banner-fade101 a:hover, #banner-fade102 a:hover, #banner-fade103 a:hover{
 		background-position: 0 -39px; 
 	}	
-	
+/* PUNTOS DE VENTA*/
