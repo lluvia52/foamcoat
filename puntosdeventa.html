@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>FOAM+COAT</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="shortcut icon" href="_/img/favicon.ico" />
+	<!-- ICONOS IPHONE -->
+	<link rel="apple-touch-icon-precomposed" href="_/img/touch-icon-iphone.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="_/img/touch-icon-ipad.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="_/img/touch-icon-iphone4.png" />
+	<link rel="stylesheet" href="_/css/main.css" type="text/css"/>
+	<style>
+ 		#map-div {
+			background-color: #fff;
+ 			padding-bottom: 50px;
+ 			width: 100%;
+ 			}
+ 		#map-wp{
+     		margin: 0 auto;
+      		background-color: #fff;
+      		width: 940px;
+      		height: 500px;
+      		}
+      	#map-canvas {
+      		margin: 0 auto;
+      		width: 100%;
+      		height: 100%;
+      		}
+      	#contenido_info h2 {
+      		font: normal 20px "clan-boldbold";
+      		margin-bottom: 10px;
+      		}
+      	#contenido_info #bodyContent {
+      		font: normal 13px "clan-bookbook";
+      	}		
+	</style>
+	<script src="_/js/modernizr.custom.02144.js"></script>
+	<script src="_/js/jquery-1.8.2.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+	<script type="text/javascript">
+			(function() {
+				window.onload = function(){
+					var tijuana = new google.maps.LatLng(32.523658, -116.980705);
+					var opciones = {
+						zoom : 12,
+						center: tijuana,
+						mapTypeId: google.maps.MapTypeId.ROADMAP
+					};
+					var div = document.getElementById('map-canvas');
+					var map = new google.maps.Map(div, opciones);
+					var infowindow = new google.maps.InfoWindow({
+						content: ''
+					});
+					
+					var marcadores = [
+						{
+							position:{
+								lat : 32.523218,
+								lng : -117.019261
+							},
+							contenido: "<div id=\"contenido_info\">"+
+											"<h2>Femco R&iacute;o</h2>"+
+												"<div id=\"bodyContent\">" +
+													"<img src=\"http://www.femco.mx/images/zonario_mapa.jpg\" align=right>"+
+													"<p>Blvd. Cuahutemoc # 2208 Esq. con Sanchez Taboada Zona R&iacute;o</p>Tel&eacute;fono: 01 (664) 686 4679<br>Fax: 01 (664) 686 4684<br>Nextel: 152*133276*7<br>Nextel: 152*133276*22"+
+												"</div>"+
+										"</div>"
+						},
+						{
+							position:{
+								lat : 32.529281,
+								lng : -117.072666
+							},
+							contenido: "<div id=\"contenido_info\">"+
+											"<h2>Femco Soler</h2>"+
+												"<div id=\"bodyContent\">" +
+													"<img src=\"http://www.femco.mx/images/soler_mapa.jpg\" align=right>"+
+													"<p>Av. Altamirano #100-A Esq. Calle Gral. Angel Flores Fracc. Soler</p>Tel&eacute;fono: 01 (664) 630 5294<br>Tel&eacute;fono: 01 (664) 630 4790<br>Fax: 01 (664) 680 4830<br>Nextel: 152*133276*8"+
+												"</div>"+
+										"</div>"
+						},
+						{
+							position:{
+								lat : 32.493627,
+								lng : -116.930095
+							},
+							contenido: "<div id=\"contenido_info\">"+
+											"<h2>Femco Insurgentes</h2>"+
+												"<div id=\"bodyContent\">" +
+													"<img src=\"http://www.femco.mx/images/insurgentes_mapa.jpg\" align=right>"+
+													"<p>Blvd Insurgentes 8202-4 Esq. con Blvd. Gato Bronco Fracc. Kino</p>Tel&eacute;fono: 01 (664) 625 2501<br>Tel&eacute;fono: 01 (664) 625 2512<br>Tel&eacute;fono: 01 (664) 625 2036<br>Fax: 01 (664) 625 2066<br>Nextel: 152*133276*6"+
+												"</div>"+
+										"</div>"
+						},
+						{
+							position:{
+								lat : 32.496287,
+								lng : -116.962251
+							},
+							contenido: "<div id=\"contenido_info\">"+
+											"<h2>Femco Carrousel</h2>"+
+												"<div id=\"bodyContent\">" +
+													"<img src=\"http://www.femco.mx/images/carrousel_mapa.jpg\" align=right>"+
+													"<p>Blvd. D&iacute;az Ordaz # 14757 Col. Santa Fe Delegaci&oacute;n La Mesa</p>Tel.: 01 (664) 686 0201<br>Tel.: 01 (664) 686 0202<br>Fax: 01 (664) 686 0200<br>Nextel: 152*133276*21"+
+												"</div>"+
+										"</div>"
+						},
+						{
+							position:{
+								lat : 32.481832,
+								lng : -116.93808
+							},
+							contenido: "<div id=\"contenido_info\">"+
+											"<h2>Femco Villa Floresta</h2>"+
+												"<div id=\"bodyContent\">" +
+													"<img src=\"http://www.femco.mx/images/villafloresta_mapa.jpg\" align=right>"+
+													"<p>Blvd. D&iacute;az Ordaz 4083, Col. Orizaba Tijuana, Baja California</p>Tel.: 01 (664) 906 1451<br>Tel.: 01 (664) 906 1452<br>Tel.: 01 (664) 906 1453<br>Fax: 01 (664) 906 1453<br>Nextel: 152*133276*16"+
+												"</div>"+
+										"</div>"
+						},
+						{
+							position:{
+								lat : 32.513833,
+								lng : -116.862216
+							},
+							contenido: "<div id=\"contenido_info\">"+
+											"<h2>Femco Cucapah</h2>"+
+												"<div id=\"bodyContent\">" +
+													"<img src=\"http://www.femco.mx/images/cucapah_mapa.jpg\" align=right>"+
+													"<p>Blvd. Cucapah 2274, Esq. con Blvd. Villa Fontana Fracc. Villa Fontana</p>Tel.: 01 (664) 972 8069<br>Tel.: 01 (664) 972 8072<br>Fax: 01 (664) 972 8132<br>Nextel: 152*133276*3<br><br>"+
+												"</div>"+
+										"</div>"
+						},
+						{
+							position:{
+								lat : 32.479602,
+								lng : -116.881112
+							},
+							contenido: "<div id=\"contenido_info\">"+
+											"<h2>Femco Florido</h2>"+
+												"<div id=\"bodyContent\">" +
+													"<img src=\"http://www.femco.mx/images/florido_mapa.jpg\" align=right>"+
+													"<p>Ruta Matamoros # 9251 Fracc. Matamoros Centro, contra esq. Calimax</p>Tel&eacute;fono: 01 (664) 701 1352<br>Tel&eacute;fono: 01 (664) 701 1353<br>Fax: 01 (664) 902 1123<br>Nextel: 152*133276*5"+
+												"</div>"+
+										"</div>"
+						}
+					];
+					for (var i = 0, j = marcadores.length; i < j; i++) {
+						var contenido = marcadores[i].contenido;
+						var marker = new google.maps.Marker({
+							position: new google.maps.LatLng(marcadores[i].position.lat, marcadores[i].position.lng),
+							map: map
+						});
+						(function(marker, contenido){						
+							google.maps.event.addListener(marker, 'click', function() {
+								infowindow.setContent(contenido);
+								infowindow.open(map, marker);
+							});
+						})(marker,contenido);
+					}				
+				}
+			})();
+		</script>
+</head>
+<body>
+<header>
+	<div id="header-wp">
+		<div id="logo"><a href="index.html" class="logo">FOAM+COAT</a></div>
+		<ul id="izq">
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="empresa.html" >Empresa</a></li>
+			<li><a href="producto.html">Producto</a></li>
+			<li> <a href="usos.html">Usos</a></li>
+		</ul>
+		<ul id="der">
+			<li><a href="instalacion.html" class="active">Instalación</a></li>
+			<li><a href="galeria.html" >Galería</a></li>
+			<li><a href="puntosdeventa.html" >Puntos de venta</a></li>
+		</ul>
+	</div><!-- end of #header-wp -->
+</header> 
+	<div id="container">
+		<div id="container-wp">
+			<div id="info">
+				<h1>Puntos de venta</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque lacinia luctus. Nunc sit amet nunc felis. Integer feugiat risus accumsan justo mattis feugiat.</p>
+			</div><!-- end of #info -->
+			
+		</div><!-- end of #container-wp -->
+	</div><!-- end of #container -->
+	<div id="map-div">
+		<div id="map-wp">
+			<div id="map-canvas"></div>	
+		</div>
+	</div>
+	<footer>
+		<div id="footer-wp">
+			<ul>
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="empresa.html">Empresa</a></li>
+				<li><a href="producto.html">Producto</a></li>
+				<li><a href="instalacion.html">Instalación</a></li>
+				<li><a href="usos.html">Usos</a></li>
+				<li><a href="galeria.html">Galería</a></li>
+				<li><a href="puntosdeventa.html">Puntos de venta</a></li>
+				<li><a href="privacidad.html">Privacidad</a></li>
+				<li><a href="faq.html">Faq</a></li>
+				<li><a href="contacto.html">Contacto</a></li>
+			</ul>
+			<p>© Copyright FOAM+COAT, 2012-2013. Todos los derechos reservados.</p>
+		</div><!-- end of #footer-wp -->
+	</footer>
+	
+</body>
+</html>
