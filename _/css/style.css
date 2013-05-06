@@ -247,7 +247,35 @@ header {
 							}
 /* Pagina Empresa */
 			#usos {
-				height: 520px;
+				position: relative;
+			}
+			#usos a {
+				position: absolute;
+			}
+			a#wall {
+				left: 400px;
+				top: 390px;
+				
+			}
+			a#garage {
+				right: 100px;
+				top: 385px;
+				
+			}
+			a#bands {
+				left: 400px;
+				top: 290px;
+				
+			}
+			a#door {
+				right: 360px;
+				top: 383px;
+				
+			}
+			a#window {
+				left: 95px;
+				top: 170px;
+				
 			}
 				#opciones {
 					background: transparent url('../img/shadow.png') repeat-x;
@@ -666,3 +694,6 @@ bottom: 5px;
 		background-position: 0 -39px; 
 	}	
 /* PUNTOS DE VENTA*/
+#info p#p-corto {
+	margin-bottom: 0px;
+}
