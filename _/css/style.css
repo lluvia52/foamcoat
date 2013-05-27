@@ -52,9 +52,8 @@ header {
 					height: 32px;
 					background: transparent url('../img/logo.png') no-repeat left top;
 					text-indent: -999999px;
-					margin: 0 auto;
-					z-index: 2000;
-					position: relative;
+					margin:  0 auto;
+					z-index: 2000;position: relative;
 					top: 30px;
 				}
 			
@@ -308,6 +307,7 @@ header {
 					position: relative;
 					margin-bottom: 20px;
 					margin-top: 10px;
+					cursor:  pointer;
 				}
 					#preguntas dl.faq dt p {
 						font: normal 16px "clan-boldbold";
@@ -315,6 +315,13 @@ header {
 						margin: 0px 55px;
 						padding-top: 0px;
 					}
+					#preguntas dl.faq dt p:hover {
+						font: normal 16px "clan-boldbold";
+						color: #93272F;
+						
+					
+					}
+					
 					#preguntas dl.faq dt img {
 						position: absolute;
 						top: -4px;
